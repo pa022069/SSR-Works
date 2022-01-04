@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css';
 import { WrapHeader, WrapFooter } from '../components/WrapTemplate';
 import { SectionContainer } from './_document';
 
-
 const Home: NextPage = () => {
   return (
     <>
