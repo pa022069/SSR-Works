@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Document from '../components/StyledDoc';
+import Document from '../../components/StyledDoc';
 
 export default Document;
 

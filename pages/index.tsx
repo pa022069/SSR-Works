@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import { Head, Image } from './components/NextComponents';
+import { Head, Image } from '../components/NextComponents';
 import styles from '../styles/Home.module.css';
 
-import { WrapHeader, WrapFooter } from './components/WrapTemplate';
+import { WrapHeader, WrapFooter } from '../components/WrapTemplate';
 import { SectionContainer } from './_document';
 
 

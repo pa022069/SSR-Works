@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import { Head } from '../components/NextComponents';
-import { WrapHeader, WrapFooter } from '../components/WrapTemplate';
+import { Head } from '../../components/NextComponents';
+import { WrapHeader, WrapFooter } from '../../components/WrapTemplate';
 import { SectionContainer } from './_document';
 
 const Works: NextPage = () => {
