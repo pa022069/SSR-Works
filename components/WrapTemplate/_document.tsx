@@ -22,6 +22,9 @@ export const LinkTag = styled.a`
   padding: 5px 10px;
   text-decoration: none;
   cursor: pointer;
+  &.active {
+    border-bottom: 1px solid #333;
+  }
 `;
 
 export const LinkList = styled.ul`

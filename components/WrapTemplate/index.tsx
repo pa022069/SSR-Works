@@ -1,7 +1,9 @@
 import { Head, Link } from '../NextComponents';
 import { HeaderContainer, LinkTag, LinkList, FooterContainer } from './_document';
+import { useRouter } from "next/router";
 
 export const WrapHeader = (): JSX.Element => {
+  const router = useRouter();
   return (
     <HeaderContainer>
       <Link href="/">Logo</Link>
@@ -10,12 +12,12 @@ export const WrapHeader = (): JSX.Element => {
         <LinkList>
           <li>
             <Link href="/about">
-              <LinkTag>About</LinkTag>
+              <LinkTag className={router.pathname == "/about" ? "active" : ""}>About</LinkTag>
             </Link>
           </li>
           <li>
             <Link href="/works">
-              <LinkTag>Works</LinkTag>
+              <LinkTag className={router.pathname == "/works" ? "active" : ""}>Works</LinkTag>
             </Link>
           </li>
           <li>

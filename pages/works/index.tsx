@@ -1,7 +1,37 @@
 import type { NextPage } from 'next';
 import { Head } from '../../components/NextComponents';
 import { WrapHeader, WrapFooter } from '../../components/WrapTemplate';
-import { SectionContainer } from './_document';
+import { 
+  SectionContainer, 
+  ListContainer, 
+  ItemContainer, 
+  ItemContent, 
+  SortContainer } from './_document';
+import { faThLarge, faThList } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const demoData = [
+  {
+    title: "標題1",
+    description: "敘述1"
+  },
+  {
+    title: "標題2",
+    description: "敘述2"
+  },
+  {
+    title: "標題3",
+    description: "敘述3"
+  },
+  {
+    title: "標題4",
+    description: "敘述4"
+  },
+  {
+    title: "標題5",
+    description: "敘述5"
+  },
+];
 
 const Works: NextPage = () => {
   return (
@@ -12,7 +42,27 @@ const Works: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WrapHeader />
-      <SectionContainer>作品</SectionContainer>
+      <SectionContainer>
+        <SortContainer>
+          <a>
+            <FontAwesomeIcon style={{fontSize: "14px"}} icon={faThLarge} />
+          </a>
+          <a>
+            <FontAwesomeIcon style={{fontSize: "14px"}} icon={faThList} />
+          </a>        
+        </SortContainer>
+        <ListContainer>
+          {
+            demoData.map((item) => <ItemContainer key={item.title}>
+              <div style={{width: "100%", height: "0px", paddingBottom: "80%"}}></div>
+              <ItemContent>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </ItemContent>
+            </ItemContainer>)
+          }
+        </ListContainer>
+      </SectionContainer>
       <WrapFooter />
     </>
   );
