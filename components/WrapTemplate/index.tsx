@@ -20,11 +20,11 @@ export const WrapHeader = (): JSX.Element => {
               <LinkTag className={router.pathname == "/works" ? "active" : ""}>Works</LinkTag>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/">
               <LinkTag>Contact</LinkTag>
             </Link>
-          </li>
+          </li> */}
         </LinkList>
       </nav>
     </HeaderContainer>
@@ -33,6 +33,9 @@ export const WrapHeader = (): JSX.Element => {
 
 export const WrapFooter = (): JSX.Element => {
   return (
-    <FooterContainer>Footer</FooterContainer>
+    <FooterContainer>
+      <div>© 2021 Jeffrey Wu. ALL RIGHTS RESERVED.</div>
+      <a>pa022069@gmail.com</a>
+    </FooterContainer>
   );
 };

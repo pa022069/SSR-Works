@@ -51,7 +51,10 @@ export const FooterContainer = styled.footer`
   background: #fff;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 15px;
+  div {
+    font-size: 14px;
+  }
 `;
