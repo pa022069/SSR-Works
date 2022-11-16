@@ -116,44 +116,29 @@ const Works: NextPage = () => {
       </Head>
       <WrapHeader />
       <SectionContainer>
-        <SortContainer>
+        {/* <SortContainer>
           <a>
             <FontAwesomeIcon onClick={() => setSortType("block")} style={{ fontSize: "14px", opacity: sortType === "block" ? 1 : 0.5 }} icon={faThLarge} />
           </a>
           <a>
             <FontAwesomeIcon onClick={() => setSortType("list")} style={{ fontSize: "14px", opacity: sortType === "list" ? 1 : 0.3 }} icon={faThList} />
           </a>
-        </SortContainer>
+        </SortContainer> */}
         <ListContainer>
           {
             demoData.map((item) => (
-              sortType === "block" ? (
-                <ItemContainer key={item.title}>
-                  <ItemPhotos style={{ position: "relative", width: "100%", height: "0px", paddingBottom: "80%" }}>
-                    <ExpandButton>
-                      <FontAwesomeIcon icon={faSearch} />
-                    </ExpandButton>
-                  </ItemPhotos>
-                  <ItemContent>
-                    <h3>{item.title}</h3>
-                    <p style={{ color: "#888" }}>{item.skill}</p>
-                  </ItemContent>
-                </ItemContainer>
-              ) : (
-                <FullContainer key={item.title}>
-                  <ItemPhotos style={{ position: "relative", width: "60%", height: "0px", paddingBottom: "30%" }}>
-                    <ExpandButton>
-                      <FontAwesomeIcon icon={faSearch} />
-                    </ExpandButton>
-                  </ItemPhotos>
-                  <FullContent>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </FullContent>
-                </FullContainer>
-              )
-            )
-            )
+              <ItemContainer key={item.title}>
+                <ItemPhotos style={{ position: "relative", width: "100%", height: "0px", paddingBottom: "80%" }}>
+                  <ExpandButton>
+                    <FontAwesomeIcon icon={faSearch} />
+                  </ExpandButton>
+                </ItemPhotos>
+                <ItemContent>
+                  <h3>{item.title}</h3>
+                  <p style={{ color: "#888" }}>{item.skill}</p>
+                </ItemContent>
+              </ItemContainer>
+            ))
           }
         </ListContainer>
       </SectionContainer>
