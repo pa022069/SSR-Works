@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 const Posts: NextPage = () => {
   const router = useRouter()
-  const { id } = router.query
+  const { id } = router.query;
   return (
     <>
       <Head>
