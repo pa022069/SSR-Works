@@ -6,13 +6,10 @@ import {
   ListContainer,
   ItemContainer,
   ItemContent,
-  SortContainer,
-  FullContainer,
-  FullContent,
   ExpandButton,
   ItemPhotos
 } from './_document';
-import { faThLarge, faThList, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react';
 
@@ -105,8 +102,6 @@ const demoData = [
 ];
 
 const Works: NextPage = () => {
-  const [sortType, setSortType] = useState<string>("block");
-
   return (
     <>
       <Head>
@@ -116,14 +111,6 @@ const Works: NextPage = () => {
       </Head>
       <WrapHeader />
       <SectionContainer>
-        {/* <SortContainer>
-          <a>
-            <FontAwesomeIcon onClick={() => setSortType("block")} style={{ fontSize: "14px", opacity: sortType === "block" ? 1 : 0.5 }} icon={faThLarge} />
-          </a>
-          <a>
-            <FontAwesomeIcon onClick={() => setSortType("list")} style={{ fontSize: "14px", opacity: sortType === "list" ? 1 : 0.3 }} icon={faThList} />
-          </a>
-        </SortContainer> */}
         <ListContainer>
           {
             demoData.map((item) => (
