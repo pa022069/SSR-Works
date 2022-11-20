@@ -11,9 +11,23 @@ import {
 } from './_document';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react';
 
 const demoData = [
+  {
+    title: "寶可夢木製拼圖",
+    description: "敘述1",
+    skill: "React / Webpack"
+  },
+  {
+    title: "特力屋 - Campaign",
+    description: "敘述1",
+    skill: "React / Webpack"
+  },
+  {
+    title: "星展隨行",
+    description: "敘述1",
+    skill: "React / Webpack"
+  },
   {
     title: "蘇格登 - 敬歡聚時刻",
     description: "敘述1",
@@ -35,21 +49,6 @@ const demoData = [
     skill: "React / Canvas"
   },
   {
-    title: "川見鱈蟹柳",
-    description: "敘述5",
-    skill: "Canvas"
-  },
-  {
-    title: "IBM - 資安人員你有多崩潰",
-    description: "敘述6",
-    skill: "Canvas"
-  },
-  {
-    title: "IBM - 數位轉型神助攻",
-    description: "敘述6",
-    skill: ""
-  },
-  {
     title: "JP Morgan - 官網活動",
     description: "敘述6",
     skill: ""
@@ -65,32 +64,7 @@ const demoData = [
     skill: "Canvas"
   },
   {
-    title: "IBM -資料塑形中心",
-    description: "敘述6",
-    skill: "Canvas"
-  },
-  {
-    title: "安能亞太",
-    description: "敘述6",
-    skill: ""
-  },
-  {
-    title: "皇家禮炮 - 品牌頁面",
-    description: "敘述6",
-    skill: ""
-  },
-  {
-    title: "飛利浦 - SAECO咖啡機",
-    description: "敘述6",
-    skill: ""
-  },
-  {
     title: "華康 - 華康黑體系列",
-    description: "敘述6",
-    skill: ""
-  },
-  {
-    title: "臺灣精品 - 電競杯",
     description: "敘述6",
     skill: ""
   },
@@ -102,7 +76,7 @@ const demoData = [
 ];
 
 const Works: NextPage = () => {
-  
+
   return (
     <>
       <Head>
