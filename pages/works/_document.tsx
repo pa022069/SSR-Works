@@ -15,6 +15,7 @@ export const SectionContainer = styled.section`
 export const ListContainer = styled.div`
   position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -24,12 +25,21 @@ export const ListContainer = styled.div`
 
 export const ItemContainer = styled.div`
   position: relative;
-  width: calc((100% / 4) - 15px);
+  width: calc((100% / 1) - 15px);
   min-height: calc(((100vw - 15px) / 4) - 15px);
   border: 1px solid #333;
   display: flex;
   flex-direction: column;
   margin: 7.5px;
+  @media(min-width: 576px) {
+    width: calc((100% / 2) - 15px);
+  }
+  @media(min-width: 992px) {
+    width: calc((100% / 3) - 15px);
+  }
+  @media(min-width: 1200px) {
+    width: calc((100% / 4) - 15px);
+  }
 `;
 
 export const ItemContent = styled.div`
