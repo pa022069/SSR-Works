@@ -10,21 +10,16 @@ export const WrapHeader = (): JSX.Element => {
       <nav>
         {/* <a href="/">Menu <span></span><span></span><span></span></a> */}
         <LinkList>
-          <li>
+          <li className={router.pathname == "/about" ? "active" : ""}>
             <Link href="/about">
-              <LinkTag className={router.pathname == "/about" ? "active" : ""}>About</LinkTag>
+              <LinkTag text="關於我">About</LinkTag>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/works" ? "active" : ""}>
             <Link href="/works">
-              <LinkTag className={router.pathname == "/works" ? "active" : ""}>Works</LinkTag>
+              <LinkTag text="精選作品">Works</LinkTag>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/">
-              <LinkTag>Contact</LinkTag>
-            </Link>
-          </li> */}
         </LinkList>
       </nav>
     </HeaderContainer>

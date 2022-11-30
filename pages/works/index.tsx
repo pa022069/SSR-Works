@@ -6,74 +6,12 @@ import {
   ListContainer,
   ItemContainer,
   ItemContent,
-  ExpandButton,
-  ItemPhotos
+  ItemPhotos,
+  WorkDataType,
+  demoData
 } from './_document';
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-const demoData = [
-  {
-    title: "寶可夢木製拼圖",
-    description: "敘述1",
-    skill: "React / Webpack"
-  },
-  {
-    title: "特力屋 - Campaign",
-    description: "敘述1",
-    skill: "React / Webpack"
-  },
-  {
-    title: "星展隨行",
-    description: "敘述1",
-    skill: "React / Webpack"
-  },
-  {
-    title: "蘇格登 - 敬歡聚時刻",
-    description: "敘述1",
-    skill: "React / Webpack"
-  },
-  {
-    title: "蘇格登 - 蘇式餐酒館",
-    description: "敘述2",
-    skill: "React / Webpack / Canvas"
-  },
-  {
-    title: "特力屋 - 購物網站",
-    description: "敘述3",
-    skill: "Bootstrap5 / jQuery"
-  },
-  {
-    title: "全聯 - 中秋達人檢定烤",
-    description: "敘述4",
-    skill: "React / Canvas"
-  },
-  {
-    title: "JP Morgan - 官網活動",
-    description: "敘述6",
-    skill: ""
-  },
-  {
-    title: "康健人壽 - 輕。生活指數",
-    description: "敘述6",
-    skill: "React / Canvas"
-  },
-  {
-    title: "諾優能 - 寶寶小情歌",
-    description: "敘述6",
-    skill: "Canvas"
-  },
-  {
-    title: "華康 - 華康黑體系列",
-    description: "敘述6",
-    skill: ""
-  },
-  {
-    title: "諾優能 - 寶寶晚輩圖",
-    description: "敘述6",
-    skill: "Canvas"
-  },
-];
+// import { faSearch } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Works: NextPage = () => {
 
@@ -88,16 +26,15 @@ const Works: NextPage = () => {
       <SectionContainer>
         <ListContainer>
           {
-            demoData.map((item) => (
+            demoData.map((item: WorkDataType) => (
               <ItemContainer key={item.title}>
-                <ItemPhotos style={{ position: "relative", width: "100%", height: "0px", paddingBottom: "80%" }}>
-                  <ExpandButton>
+                <ItemPhotos href={item.url} target="_blank" style={{ backgroundImage: `url(${item.imageUrl})`, position: "relative", width: "100%", height: "0px", paddingBottom: "70%" }}>
+                  {/* <ExpandButton>
                     <FontAwesomeIcon icon={faSearch} />
-                  </ExpandButton>
+                  </ExpandButton> */}
                 </ItemPhotos>
                 <ItemContent>
-                  <h3>{item.title}</h3>
-                  <p style={{ color: "#888" }}>{item.skill}</p>
+                  <h3 style={{margin: '0'}}>{item.title}</h3>
                 </ItemContent>
               </ItemContainer>
             ))

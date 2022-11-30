@@ -18,12 +18,23 @@ export const HeaderContainer = styled.section`
 `;
 
 export const LinkTag = styled.a`
+  position: relative;
   display: block;
   padding: 5px 10px;
   text-decoration: none;
   cursor: pointer;
-  &.active {
-    border-bottom: 1px solid #333;
+  overflow: hidden;
+  text-align: center;
+
+  &::after {
+    content: '${(props: {text: string}) => props.text}';
+    display: block;
+    white-space: nowrap;
+    transition: all 0.4s;
+    margin-top: 10px;
+  }
+  &:hover {
+    transform: translateY(-50%);
   }
 `;
 
@@ -36,12 +47,16 @@ export const LinkList = styled.ul`
   li {
     list-style: none;
     margin: 0 15px;
+    height: 34px;
+    overflow: hidden;
+    
+    &.active {
+      border-bottom: 1px solid #333;
+    }
+
     a {
       border-bottom: 1px solid rgba(0, 0, 0, 0);
       transition: all 0.3s;
-      &:hover {
-        border-bottom: 1px solid #333;
-      }
     }
   }
 `;
