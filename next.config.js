@@ -6,5 +6,4 @@ const nextConfig = {
     apiKey: 'api-key',
   },
 }
-
 module.exports = nextConfig
