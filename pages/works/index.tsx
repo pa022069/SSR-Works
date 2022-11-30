@@ -14,7 +14,6 @@ import {
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Works: NextPage = () => {
-
   return (
     <>
       <Head>
