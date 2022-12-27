@@ -8,14 +8,20 @@ export const HeaderContainer = styled.section`
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.7);
+  // background: rgba(240, 240, 240, 0.1);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 15px;
-  border-bottom: 1px solid #333;
+  padding: 0px 1.5rem;
+  // border-bottom: 1px solid #333;
 `;
+
+export const HeaderLogo = styled.div`
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #666;
+`
 
 export const LinkTag = styled.a`
   position: relative;
@@ -49,6 +55,9 @@ export const LinkList = styled.ul`
     margin: 0 15px;
     height: 34px;
     overflow: hidden;
+    @media (min-width: 1200px) {
+      font-size: 1.125rem;
+    }
     
     &.active {
       border-bottom: 1px solid #333;
@@ -63,12 +72,13 @@ export const LinkList = styled.ul`
 
 export const FooterContainer = styled.footer`
   position: relative;
-  background: #fff;
+  // background: #fff;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   div {
     font-size: 14px;
   }

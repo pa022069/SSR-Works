@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Document from '../../components/StyledDoc';
+import { styleUtils } from '../../utils/style-setting';
 
 export default Document;
 
@@ -13,7 +14,6 @@ export interface WorkDataType {
 export const SectionContainer = styled.section`
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #333;
   padding-top: 70px;
   padding-bottom: 1rem;
 `;
@@ -27,23 +27,23 @@ export const ListContainer = styled.div`
   align-items: stretch;
   flex-wrap: wrap;
   padding: 7.5px;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 export const ItemContainer = styled.div`
   position: relative;
   width: calc((100% / 1) - 15px);
-  border: 1px solid #333;
+  // border: 1px solid #333;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   margin: 7.5px;
   @media(min-width: 576px) {
     width: calc((100% / 2) - 15px);
   }
-  @media(min-width: 992px) {
-    width: calc((100% / 3) - 15px);
-  }
   @media(min-width: 1200px) {
-    width: calc((100% / 4) - 15px);
+    width: calc((100% / 3) - 15px);
   }
 `;
 
@@ -51,7 +51,8 @@ export const ItemContent = styled.div`
   position: relative;
   width: 100%;
   padding: 7.5px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #999;
+  background-color: #FFF;
   h3 {
     margin: 0;
     margin-bottom: 7.5px;
@@ -61,6 +62,15 @@ export const ItemContent = styled.div`
   p {
     margin: 0;
     font-size: 14px;
+  }
+`;
+
+export const ItemDetail = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  svg {
+    width: 100%;
   }
 `;
 

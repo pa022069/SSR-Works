@@ -1,12 +1,21 @@
 import { Head, Link } from '../NextComponents';
-import { HeaderContainer, LinkTag, LinkList, FooterContainer } from './_document';
+import React, { useEffect } from 'react';
+import { HeaderContainer, LinkTag, LinkList, FooterContainer, HeaderLogo } from './_document';
 import { useRouter } from "next/router";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const WrapHeader = (): JSX.Element => {
   const router = useRouter();
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <HeaderContainer>
-      <Link href="/">Logo</Link>
+      <HeaderLogo>
+        <Link href="/">J.W.</Link>
+      </HeaderLogo>
       <nav>
         {/* <a href="/">Menu <span></span><span></span><span></span></a> */}
         <LinkList>
@@ -15,11 +24,11 @@ export const WrapHeader = (): JSX.Element => {
               <LinkTag text="關於我">About</LinkTag>
             </Link>
           </li>
-          <li className={router.pathname == "/works" ? "active" : ""}>
+          {/* <li className={router.pathname == "/works" ? "active" : ""}>
             <Link href="/works">
               <LinkTag text="精選作品">Works</LinkTag>
             </Link>
-          </li>
+          </li> */}
         </LinkList>
       </nav>
     </HeaderContainer>

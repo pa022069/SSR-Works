@@ -8,10 +8,11 @@ import {
   ItemContent,
   ItemPhotos,
   WorkDataType,
+  ItemDetail,
   demoData
 } from './_document';
-// import { faSearch } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Works: NextPage = () => {
   return (
     <>
@@ -27,13 +28,18 @@ const Works: NextPage = () => {
             demoData.map((item: WorkDataType) => (
               <ItemContainer key={item.title}>
                 <ItemPhotos href={item.url} target="_blank" style={{ backgroundImage: `url(${item.imageUrl})`, position: "relative", width: "100%", height: "0px", paddingBottom: "70%" }}>
-                  {/* <ExpandButton>
-                    <FontAwesomeIcon icon={faSearch} />
-                  </ExpandButton> */}
+                  {/* <ItemDetail>
+                    <Link href="/about">
+                      <FontAwesomeIcon icon={faSearch} />
+                    </Link>
+                    <Link href="/about">
+                      <FontAwesomeIcon icon={faPaperPlane} />
+                    </Link>
+                  </ItemDetail> */}
                 </ItemPhotos>
-                <ItemContent>
+                {/* <ItemContent>
                   <h3 style={{margin: '0'}}>{item.title}</h3>
-                </ItemContent>
+                </ItemContent> */}
               </ItemContainer>
             ))
           }
