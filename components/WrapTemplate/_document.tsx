@@ -13,7 +13,7 @@ export const HeaderContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 1.5rem;
+  padding: 10px 1.5rem;
   // border-bottom: 1px solid #333;
 `;
 
@@ -31,6 +31,7 @@ export const LinkTag = styled.a`
   cursor: pointer;
   overflow: hidden;
   text-align: center;
+  color: #555;
 
   &::after {
     content: '${(props: {text: string}) => props.text}';
@@ -38,6 +39,7 @@ export const LinkTag = styled.a`
     white-space: nowrap;
     transition: all 0.4s;
     margin-top: 10px;
+    color: #555;
   }
   &:hover {
     transform: translateY(-50%);

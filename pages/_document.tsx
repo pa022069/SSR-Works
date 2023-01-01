@@ -7,27 +7,23 @@ export interface WorkDataType {
   title: string;
   description: string;
   imageUrl: string;
-  url?: string; 
+  url?: string;
 }
 
 export const SectionContainer = styled.section`
   position: relative;
   width: 100%;
-  min-height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const KvSection = styled.div`
   position: relative;
   width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 1rem;
-  overflow: hidden;
   h1 {
     position: relative;
     font-family: 'Anton', sans-serif;
@@ -58,6 +54,30 @@ export const ListContainer = styled.div`
   flex-wrap: wrap;
   padding: 1rem;
   margin: 0 auto;
+`;
+
+export const MainTitle = styled.h2`
+  width: fit-content;
+  position: relative;
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #F0F0F0;
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 `;
 
 export const ItemContainer = styled.div`
@@ -109,6 +129,13 @@ export const ItemPhotos = styled.a`
   }
 `;
 
+export const SkillItem = styled.div`
+  width: fit-content;
+  border: 2px solid #555;
+  border-radius: 0.5rem;
+  padding: 1rem;
+`;
+
 export const demoData = [
   {
     title: "寶可夢木製拼圖",
@@ -120,7 +147,7 @@ export const demoData = [
     title: "特力屋 - Campaign",
     description: "敘述1",
     imageUrl: 'images/work-1.jpg',
-    url: 'http://pokemon.hellofish.com.tw/'
+    url: 'https://www.our-work.com.tw/creative/jeffrey/work/20220913-trCampaign-rwd/'
   },
   {
     title: "星展隨行",
@@ -183,3 +210,70 @@ export const demoData = [
     url: 'https://hoproject.our-work.com.tw/2019/20191121-nutrilon-picture/'
   },
 ];
+
+export const skillsArray = [
+  {
+    name: 'React',
+    type: 'front'
+  },
+  {
+    name: 'Redux',
+    type: 'front'
+  },
+  {
+    name: 'Typescript',
+    type: 'front',
+  },
+  {
+    name: 'Ant Design',
+    type: 'front'
+  },
+  {
+    name: 'Jest',
+    type: 'front'
+  },
+  {
+    name: 'Sass',
+    type: 'front'
+  },
+  {
+    name: 'Tailwind CSS',
+    type: 'front'
+  },
+  {
+    name: 'Styled-components',
+    type: 'front'
+  },
+  {
+    name: 'jQuery',
+    type: 'front'
+  },
+  {
+    name: 'Webpack',
+    type: 'front'
+  },
+  {
+    name: 'NodeJs',
+    type: 'back'
+  },
+  {
+    name: 'Express',
+    type: 'back'
+  },
+  {
+    name: 'MySQL',
+    type: 'back'
+  },
+  {
+    name: 'Fastify',
+    type: 'back'
+  },
+  {
+    name: 'Photoshop',
+    type: 'design'
+  },
+  {
+    name: 'Illustrator',
+    type: 'design'
+  },
+]
