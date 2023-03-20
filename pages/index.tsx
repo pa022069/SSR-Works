@@ -12,7 +12,7 @@ import {
   WorkDataType,
   ItemPhotos,
   MainTitle,
-  SkillItem
+  SkillItem,
 } from "./_document";
 
 const Home: NextPage = () => {
@@ -23,11 +23,11 @@ const Home: NextPage = () => {
         <meta name="description" content="Portfolio create by NextJs" />
       </Head>
       <WrapHeader />
-      <SectionContainer style={{height: '100%'}}>
+      <SectionContainer style={{ height: "100%" }}>
         <KvSection>
           <h1>
             HELLO.
-            <br /> I&#39;M <span>FRONT-END</span>
+            <br /> I&#39;M <span>FULL-STACK</span>
             <br />
             DEVELOPER
           </h1>
