@@ -1,20 +1,26 @@
-import { Head, Link } from '../NextComponents';
-import React, { useEffect } from 'react';
-import { HeaderContainer, LinkTag, LinkList, FooterContainer, HeaderLogo } from './_document';
+import { Head, Link } from "../NextComponents";
+import React, { useEffect } from "react";
+import {
+  HeaderContainer,
+  LinkTag,
+  LinkList,
+  FooterContainer,
+  HeaderLogo,
+} from "./_document";
 import { useRouter } from "next/router";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const WrapHeader = (): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   return (
     <HeaderContainer>
       <HeaderLogo>
-        <Link href="/" >J.W.</Link>
+        <Link href="/">J.W.</Link>
       </HeaderLogo>
       {/* <nav>
         <a href="/">Menu <span></span><span></span><span></span></a>
@@ -38,7 +44,7 @@ export const WrapHeader = (): JSX.Element => {
 export const WrapFooter = (): JSX.Element => {
   return (
     <FooterContainer>
-      <div>© 2022 Jeffrey Wu. ALL RIGHTS RESERVED.</div>
+      <div>© 2023 Jeffrey Wu. ALL RIGHTS RESERVED.</div>
       <a>pa022069@gmail.com</a>
     </FooterContainer>
   );
