@@ -131,6 +131,12 @@ export const SkillItem = styled.div`
 
 export const demoData = [
   {
+    title: "迪士尼百年慶典木質拼圖",
+    description: "敘述1",
+    imageUrl: 'images/work-13.png',
+    url: 'https://project100.hellofish.com.tw/'
+  },
+  {
     title: "REVIVER",
     description: "敘述1",
     imageUrl: "images/work-12.png",

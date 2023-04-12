@@ -8,7 +8,7 @@ export interface WorkDataType {
   title: string;
   description: string;
   imageUrl: string;
-  url?: string; 
+  url?: string;
 }
 
 export const SectionContainer = styled.section`
@@ -82,7 +82,7 @@ export const FullContainer = styled.div`
   margin: 7.5px;
   display: flex;
   flex-direction: row;
-`; 
+`;
 
 export const FullContent = styled.div`
   position: relative;
@@ -131,6 +131,12 @@ export const ItemPhotos = styled.a`
 `;
 
 export const demoData = [
+  {
+    title: "迪士尼百年慶典木質拼圖",
+    description: "敘述1",
+    imageUrl: 'images/work-13.jpg',
+    url: 'https://project100.hellofish.com.tw/'
+  },
   {
     title: "寶可夢木製拼圖",
     description: "敘述1",
